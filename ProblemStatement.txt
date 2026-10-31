@@ -1,0 +1,53 @@
+Problem statement  (Using RAG)
+
+A college wants an AI assistant that answers student queries using its official documents. The assistant must provide accurate, source-supported answers and must not invent information when the answer is unavailable.
+
+Requirements
+
+- Accept at least five PDF or text documents.
+- Process documents and build a searchable knowledge base.
+- Answer questions using retrieved content.
+- Display supporting source information for answers.
+- Handle questions whose answers are absent from the knowledge base.
+- Provide a simple user interface.
+- Include test cases and a README explaining the design.
+
+Mandatory test scenarios
+
+1. Ask a question whose answer appears clearly in a document.
+2. Ask a question requiring information from two documents.
+3. Ask an unrelated question that cannot be answered from the documents.
+4. Ask a question using different wording from the source text.
+5. Provide two documents with conflicting information and observe how the application responds.
+
+Submission requirements
+
+- Source code and dependency file.
+- README with setup instructions and architecture.
+- Sample documents used for testing.
+- At least 10 test questions with expected results.
+- A short demo and explanation of one technical problem they encountered.
+
+## How to prevent students from relying heavily on GPT
+
+The most effective approach is to assess their reasoning and ability to modify their own implementation, not just the final output.
+
+| Assessment                                  | Marks |
+| ------------------------------------------- | ----- |
+| Working application and RAG pipeline        | 25    |
+| Retrieval quality and source citations      | 20    |
+| Handling missing or conflicting information | 15    |
+| Testing and evaluation                      | 15    |
+| Code explanation and debugging              | 15    |
+| Live modification challenge                 | 10    |
+| Total                                       | 100   |
+
+### Three rules I would enforce
+
+1. Use an unseen document during the demonstration. Give each student a new document shortly before their demo and ask them to ingest it.
+2. Ask them to modify one feature live. For example, change the missing-answer behavior, adjust the retrieval count, or display source metadata.
+3. Ask why, not just what. Why did they choose their chunk size? What happens if retrieval returns irrelevant passages? How did they measure answer quality?
+
+You can permit GPT as a development aid if your course allows it, but require students to disclose its use and explain every important component. A student who cannot explain or modify the code should not receive full marks.
+
+My suggestion: Start with the College Knowledge Assistant, but provide different document sets to different students. That keeps the assignment consistent while making copying less useful.
